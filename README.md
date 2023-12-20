@@ -1,6 +1,6 @@
 # AWS SSO Profile Selector
 
-Loads all AWS SSO Profiles and allows you to select the desired one to load.
+Loads all AWS SSO Profiles and allows you to select the desired one to load into your current shell session.
 
 Once you have completed the initial setup of [AWS SSO](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html), you will have a `~/.aws/config` file that looks something like this:
     
