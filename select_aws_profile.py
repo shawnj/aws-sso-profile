@@ -1,5 +1,4 @@
 import os
-import sys
 
 def let_user_pick(options):
     print("AWS PROFILES: ")
