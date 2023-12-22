@@ -1,6 +1,7 @@
 import unittest
 import os
 import select_aws_profile
+from unittest.mock import patch
 
 class TestSelectAwsProfile(unittest.TestCase):
     def setUp(self):
@@ -11,7 +12,8 @@ class TestSelectAwsProfile(unittest.TestCase):
 
     def test_main(self):
         config_path = "test_config"
-        select_aws_profile.main(config_path)
+        with patch('builtins.input', return_value='1'):
+            select_aws_profile.main(config_path)
         with open(os.path.join(os.path.expanduser('~'), '.aws-env'), 'r') as f:
             self.assertEqual(f.read(), 'AWS_PROFILE="test"')
 
