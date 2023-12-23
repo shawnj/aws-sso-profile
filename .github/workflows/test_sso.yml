@@ -9,7 +9,7 @@ on:
 jobs:
     build:
         name: Test Build
-        
+
         runs-on: ubuntu-latest
 
         steps:
@@ -27,4 +27,6 @@ jobs:
 
         - name: Run tests
           run: |
+            mkdir -p .aws
+            touche .aws/test_config
             python -m unittest discover
