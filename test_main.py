@@ -6,7 +6,7 @@ from unittest.mock import patch
 class TestSelectAwsProfile(unittest.TestCase):
     def setUp(self):
         # Create a test config file if it doesn't exist
-        self.test_config_path = os.path.join(os.getcwd(), '.aws/test_config')
+        self.test_config_path = os.path.join(os.path.expanduser('~'), '.aws/test_config')
         with open(self.test_config_path, 'w') as f:
             f.write('[profile test]\n')
 
