@@ -27,6 +27,6 @@ jobs:
 
         - name: Run tests
           run: |
-            mkdir -p .aws
+            mkdir .aws
             touch .aws/test_config
             python -m unittest discover
