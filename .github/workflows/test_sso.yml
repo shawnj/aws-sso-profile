@@ -29,4 +29,5 @@ jobs:
           run: |
             mkdir .aws
             touch .aws/test_config
+            ls -al
             python -m unittest discover
