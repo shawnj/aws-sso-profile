@@ -32,10 +32,10 @@ sso_start_url = https://my-sso-portal.awsapps.com/start
 chmod +x /<script_directory>/aws-sso-profile.sh
 
 # Create an alias to run the script
-alias aws-sso-profile="source /<script_directory>/aws-sso-profile/select-aws-profile.sh"
+alias aws-sso-profile="source /<script_directory>/aws-sso-profile/select-aws-profile.sh <file-path-to-python-script>"
 
 # Or run the script directly
-source /<script_directory>/aws-sso-profile/select-aws-profile.sh
+source /<script_directory>/aws-sso-profile/select-aws-profile.sh <file-path-to-python-script>
 
 # Run the script with the alias
 aws-sso-profile
